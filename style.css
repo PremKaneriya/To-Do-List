@@ -2,13 +2,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    --dot-bg: rgb(106, 173, 236);
+    --dot-color: rgb(242, 0, 206);
+    --dot-size: 1px;
+    --dot-space: 22px;
+    background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
 }
 
 .container {
     width: 100%;
     min-height: 100vh;
-    background: #157A6E;
     padding: 10px;
 }
 
@@ -19,6 +29,7 @@
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .todo-app h1 {
@@ -30,14 +41,14 @@
 
 .todo-app h1 img {
     width: 35px;
-    margin-left:10px ;
+    margin-left: 10px;
 }
 
 .row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #F9B5AC;
+    background: #c0acf9;
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
@@ -56,7 +67,7 @@
     border: none;
     outline: none;
     padding: 16px 50px;
-    background: #987284;
+    background: #0224ff;
     color: #fff;
     font-size: 14px;
     border-radius: 40px;
@@ -65,7 +76,7 @@
 }
 
 .row button:hover {
-    background-color: #EE7674;
+    background-color: #9084d0;
 }
 
 .row button:active {
@@ -123,4 +134,4 @@ ul li span:hover {
 }
 
 
-
+/* -------------------------------- */
